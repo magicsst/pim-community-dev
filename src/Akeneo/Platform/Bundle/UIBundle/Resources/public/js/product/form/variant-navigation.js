@@ -63,6 +63,7 @@ define(
              */
             configure: function () {
                 this.listenTo(UserContext, 'change:catalogLocale change:catalogScope', this.render);
+                this.listenTo(this.getRoot(), 'pim_enrich:form:entity:post_fetch', this.render.bind(this));
 
                 return BaseForm.prototype.configure.apply(this, arguments);
             },
@@ -157,7 +158,7 @@ define(
                             this.redirectToEntity(event.object);
                         })
                         .on('select2-open', () => {
-                            this.addSelect2Footer(dropDown)
+                            this.addSelect2Footer(dropDown);
                         });
 
                     this.dropdowns.push(dropDown.data('select2'));
@@ -192,7 +193,7 @@ define(
                                         this.openModal(parentCode);
                                     });
                             });
-                    })
+                    });
             },
 
             /**
@@ -318,7 +319,7 @@ define(
                                 const currentLevel = parent.meta.level + 1;
 
                                 return currentLevel === familyVariant.variant_attribute_sets.length;
-                            })
+                            });
                     });
             },
 

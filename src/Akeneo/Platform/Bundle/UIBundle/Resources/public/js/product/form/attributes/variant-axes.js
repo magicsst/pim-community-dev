@@ -40,7 +40,7 @@ define(
                 const field = event.field;
 
                 if (axesAttributeCodes.includes(field.attribute.code)) {
-                    field.setEditable(false);
+                    //field.setEditable(false);
                     this.updateFieldElements(field);
                 }
 
