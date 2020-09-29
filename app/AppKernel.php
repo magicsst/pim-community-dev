@@ -96,7 +96,7 @@ class AppKernel extends Kernel
             new Akeneo\Platform\Bundle\NotificationBundle\PimNotificationBundle(),
             new Akeneo\Platform\Bundle\UIBundle\PimUIBundle(),
             new Akeneo\Platform\Bundle\CatalogVolumeMonitoringBundle\PimCatalogVolumeMonitoringBundle(),
-            new Akeneo\Platform\CommunicationChannel\Infrastructure\Framework\Symfony\AkeneoCommunicationChannelBundle(),
+            //new Akeneo\Platform\CommunicationChannel\Infrastructure\Framework\Symfony\AkeneoCommunicationChannelBundle(),
         ];
     }
 
