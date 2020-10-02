@@ -75,6 +75,7 @@ akeneo_data_quality_insights:
         dqi_status: Data Quality Insights status
         activated: Activated
         disabled: Disabled
+        used_groups_helper: "The following attributes groups are taken into account in the Data Quality Insights calculation:"
 
 pim_title:
     akeneo_data_quality_insights_dashboard: Data Quality Insights

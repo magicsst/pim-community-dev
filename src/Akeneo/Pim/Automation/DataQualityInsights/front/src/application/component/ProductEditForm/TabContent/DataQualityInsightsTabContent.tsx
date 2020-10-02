@@ -7,6 +7,7 @@ import TabContentWithPortalDecorator from "../../TabContentWithPortalDecorator";
 import {PRODUCT_DATA_QUALITY_INSIGHTS_TAB_NAME, PRODUCT_MODEL_DATA_QUALITY_INSIGHTS_TAB_NAME} from '../../../constant';
 import ProductEvaluationFetcher from "../../../../infrastructure/fetcher/ProductEditForm/ProductEvaluationFetcher";
 import usePageContext from "../../../../infrastructure/hooks/ProductEditForm/usePageContext";
+import {AttributeGroupsHelper} from "./DataQualityInsights/AttributesGroupsHelper";
 
 export const CONTAINER_ELEMENT_ID = 'data-quality-insights-product-tab-content';
 
@@ -21,6 +22,7 @@ const BaseDataQualityInsightsTabContent: FunctionComponent<DataQualityInsightsTa
 
   return (
     <>
+      <AttributeGroupsHelper/>
       {locale && channel && productEvaluation && (
         <>
         {Object.entries(productEvaluation).map(([code, axisEvaluationData]) => {
